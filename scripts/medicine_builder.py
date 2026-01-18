@@ -2,6 +2,9 @@ import requests
 import json
 import os
 
+# Create medicines folder if it does not exist
+os.makedirs("medicines", exist_ok=True)
+
 # -------- FUNCTIONS ---------
 
 def get_openfda_list():
