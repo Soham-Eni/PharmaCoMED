@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Medicine Database</title>
+<script src="search_index.js"></script>
+</head>
+
+<body>
+
+<h1 align="center">Medicine Information Database</h1>
+
+<p align="center">
+<input type="text" id="searchbox" placeholder="Enter medicine name">
+<button onclick="find()">Search</button>
+</p>
+
+<script>
+
+function find() {
+
+var query = document.getElementById("searchbox").value.toLowerCase();
+
+for(var i=0; i<medicines.length; i++) {
+
+if(medicines[i].name.toLowerCase() == query) {
+
+window.location = "medicines/" + medicines[i].page;
+
+return;
+
+}
+}
+
+alert("Medicine not found");
+
+}
+
+</script>
+
+</body>
+</html>
